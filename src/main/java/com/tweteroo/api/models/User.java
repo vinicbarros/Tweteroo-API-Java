@@ -6,6 +6,8 @@ public class User {
   private String username;
   private String avatar;
 
+  public User() {}
+
   public User(UserDTO user) {
     this.username = user.username();
     this.avatar = user.avatar();
@@ -17,5 +19,10 @@ public class User {
 
   public String showAvatar() {
     return this.avatar;
+  }
+
+  public void userTweet(String username, String avatar) {
+    this.username = username;
+    this.avatar = avatar;
   }
 }
