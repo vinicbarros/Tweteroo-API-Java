@@ -2,6 +2,7 @@ package com.tweteroo.api.repositories;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.stereotype.Repository;
 
@@ -13,6 +14,18 @@ public class UserRepository {
 
   public void addNew(User user) {
     users.add(user);
+  }
+
+  public Optional<User> findUserByName(String name) {
+    User user = new User();
+    
+    for (int i = 0; i < users.size(); i++) {
+      if(users.get(i).showUsername().equals(name)) {
+        user = users.get(i);
+      }
+    }
+
+    return Optional.ofNullable(user);
   }
 
 }
