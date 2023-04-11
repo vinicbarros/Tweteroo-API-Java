@@ -9,8 +9,4 @@ public class Tweet extends User {
     this.text = text;
     super.userTweet(username, avatar);
   }
-
-  public String showText() {
-    return this.text;
-  }
 }

@@ -20,7 +20,7 @@ public class UserRepository {
     User user = new User();
     
     for (int i = 0; i < users.size(); i++) {
-       String username = users.get(i).showUsername();
+       String username = users.get(i).getUsername();
        
       if(username.equals(name)) {
         user = users.get(i);

@@ -22,8 +22,8 @@ public class UserService {
   public String findUserAvatarByUsername(String username) {
 
     Optional<User> user = repository.findUserByName(username);
-    if(user.get().showAvatar() != null) {
-      return user.get().showAvatar();
+    if(user.get().getAvatar() != null) {
+      return user.get().getAvatar();
     }
     return "Not found";
   }

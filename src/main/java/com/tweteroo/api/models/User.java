@@ -15,14 +15,6 @@ public class User {
     this.avatar = user.avatar();
   }
 
-  public String showUsername() {
-    return this.username;
-  }
-
-  public String showAvatar() {
-    return this.avatar;
-  }
-
   public void userTweet(String username, String avatar) {
     this.username = username;
     this.avatar = avatar;
