@@ -1,7 +1,9 @@
 package com.tweteroo.api.models;
 
+import lombok.Getter;
+
 public class Tweet extends User {
-  private String text;
+  @Getter private String text;
 
   public Tweet(String username, String avatar, String text) {
     this.text = text;

@@ -2,9 +2,11 @@ package com.tweteroo.api.models;
 
 import com.tweteroo.api.dto.UserDTO;
 
+import lombok.Getter;
+
 public class User {
-  private String username;
-  private String avatar;
+  @Getter private String username;
+  @Getter private String avatar;
 
   public User() {}
 
