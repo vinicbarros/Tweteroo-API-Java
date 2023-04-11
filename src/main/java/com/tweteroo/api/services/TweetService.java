@@ -19,7 +19,7 @@ public class TweetService {
   private TweetRepository tweetRepository;
 
   public void newTweet(TweetDTO tweet) {
-    String avatar = userService.findUserAvatar(tweet.avatar());
+    String avatar = userService.findUserAvatarByUsername(tweet.username());
 
     if (avatar.equals("Not found")) throw new Error("User doesn't exist");
 

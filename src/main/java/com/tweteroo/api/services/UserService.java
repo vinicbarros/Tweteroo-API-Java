@@ -19,9 +19,10 @@ public class UserService {
     repository.addNew(new User(user));
   }
 
-  public String findUserAvatar(String username) {
+  public String findUserAvatarByUsername(String username) {
+
     Optional<User> user = repository.findUserByName(username);
-    if(user.isPresent()) {
+    if(user.get().showAvatar() != null) {
       return user.get().showAvatar();
     }
     return "Not found";
