@@ -34,4 +34,16 @@ public class TweetRepository {
     return filteredTweets;
   } 
 
+  public List<Tweet> getAllTweetsOfUser(String username) {
+    List<Tweet> tweetsOfUser = new ArrayList<>();
+
+    for (int i = tweets.size() - 1; i >= 0; i--) {
+      if(tweets.get(i).getUsername().equals(username)) {
+        tweetsOfUser.add(tweets.get(i));
+      }
+    }
+
+    return tweetsOfUser;
+  }
+
 }

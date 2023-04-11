@@ -29,4 +29,8 @@ public class TweetService {
   public List<Tweet> tweets(int pag) {
     return tweetRepository.getAllTweets(pag);
   }
+
+  public List<Tweet> tweetsOfUser(String username) {
+    return tweetRepository.getAllTweetsOfUser(username);
+  }
 }
